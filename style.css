@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    margin-top: 20px;
+    color: #4CAF50;
+}
+canvas {
+    display: none;
+}
+.avatar-container {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.avatar {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.face {
+    width: 100%;
+    height: 65%;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+}
+/* Hair Types */
+.hair {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: brown;
+}
+.short-hair {
+    height: 30px;
+}
+.long-hair {
+    height: 70px;
+}
+.ponytail {
+    height: 50px;
+    background: linear-gradient(to right, brown 30%, transparent 30%) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+.braided {
+    height: 50px;
+    background: linear-gradient(to right, brown 15%, transparent 15%) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+.curly-hair {
+    height: 50px;
+    background-image: radial-gradient(circle, brown 20%, transparent 20%);
+    background-size: 20px 20px;
+}
+.bald {
+    display: none;
+}
+/* Eyes */
+.eyes {
+    position: absolute;
+    top: 45%;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+.eyes.right {
+    left: 135px;
+}
+.round-eye {
+    border-radius: 50%;
+}
+.almond-eye {
+    border-radius: 50% / 20%;
+}
+.mouth {
+    position: absolute;
+    top: 60%;
+    left: 75px;
+    width: 50px;
+    height: 20px;
+    background-color: red;
+    border-radius: 0 0 50px 50px;
+}
+.smile {
+    border-radius: 0 0 50px 50px;
+    background: red;
+}
+.frown {
+    border-radius: 50px 50px 0 0;
+    background: red;
+}
+.neutral {
+    height: 10px;
+    width: 50px;
+    background: red;
+    position: absolute;
+    top: 60%;
+    left: 75px;
+}
+.clothes {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background-color: blue;
+    border-radius: 0 0 50px 50px;
+}
+/* Accessory styles */
+.glasses {
+    position: absolute;
+    top: 100px; /* Adjust positioning as needed */
+    left: 50px; /* Adjust positioning as needed */
+    width: 100px; /* Width of the glasses */
+    height: 10px; /* Height of the glasses */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1;
+}
+.glasses:before,
+.glasses:after {
+    content: '';
+    position: absolute;
+    width: 30px; /* Width of each lens */
+    height: 30px; /* Height of each lens */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: -10px; /* Position above the main glasses body */
+}
+.glasses:before {
+    left: -5px; /* Position left lens */
+}
+.glasses:after {
+    right: -5px; /* Position right lens */
+}
+/* Control Panel */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.control-item {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Buttons */
+.button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
